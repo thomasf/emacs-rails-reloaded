@@ -62,8 +62,16 @@
 (defun rails/compile/error-regexp-alist ()
   (list
    (list 'rails/compile/error
-				 "\\(?:\\[\\|^\\|\\s+\\|(\\)?\\(\\([^ :\n\]+vendor/rails[^ :\n\]+\\)\\|\\([^ :\n\]+vendor/[^ :\n\]+\\)\\|[^ :\n\]+\\):\\([0-9]+\\)+\\b"
-				 1 3 nil '(3 . 2) 1)))
+				 (concat "\\(?:\\[\\|^\\|\\s+\\|(\\)?"
+								 ;; rails framefork files should be a 'info'
+								 "\\(\\([^ :\n\]+vendor/rails[^ :\n\]+\\)\\|"
+								 ;; all files from vendor/ (plugins and etc) should be
+								 ;; a 'warning'
+								 "\\([^ :\n\]+vendor/[^ :\n\]+\\)\\|"
+								 ;; all other is 'error'
+								 "[^ :\n\]+\\)"
+								 ":\\([0-9]+\\)+\\b")
+				 1 4 nil '(3 . 2) 1)))
 
 
 (define-derived-mode rails/compilation-mode compilation-mode "RCompile"
