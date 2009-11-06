@@ -6,7 +6,7 @@
   (rails/compile/run-file
    root
    rails-buffer
-   rails/ruby/command
+   (concat rails/ruby/command " -Itest")
    "%s"
    "_test\\.rb$"))
 
