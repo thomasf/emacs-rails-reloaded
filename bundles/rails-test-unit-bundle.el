@@ -11,11 +11,11 @@
    "_test\\.rb$"))
 
 (defun rails/test-unit-bundle/current-method (root rails-buffer)
-  (when-bind (method (rails/ruby/current-method))
+  (when-bind (method (rails/ruby/current-test-method))
     (rails/compile/run-file
      root
      rails-buffer
-     rails/ruby/command
+     (concat rails/ruby/command " -Itest")
      (concat "%s --name=" method)
      "_test\\.rb$")))
 

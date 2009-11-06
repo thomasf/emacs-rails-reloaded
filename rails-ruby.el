@@ -37,6 +37,23 @@
         (setq action (buffer-substring-no-properties (match-beginning 1) (match-end 1)))))
     action))
 
+(defun rails/ruby/current-test-method ()
+  (let ((action (rails/ruby/current-method))
+	(re "^ *test +\\(['\"]\\)\\([^\\1]+\\)\\1"))
+    (unless action
+      (save-excursion
+	(end-of-line)
+	(when (re-search-backward re nil t)
+	  (setq action
+		(concat "test_"
+			(replace-regexp-in-string
+			 "[[:space:]]"
+			 "_"
+			 (buffer-substring-no-properties
+			  (match-beginning 2)
+			  (match-end 2)))))))
+      action)))
+
 (defun rails/ruby/goto-method-in-current-buffer (action)
     (let* (pos
            (cur-pos (point))
