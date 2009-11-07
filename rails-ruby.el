@@ -79,8 +79,8 @@
     (inferior-ruby-mode)
     (make-local-variable 'inferior-ruby-first-prompt-pattern)
     (make-local-variable 'inferior-ruby-prompt-pattern)
-    (setq inferior-ruby-first-prompt-pattern "^>> "
-          inferior-ruby-prompt-pattern "^>> ")
+    (setq inf-ruby-first-prompt-pattern "^>> "
+          inf-ruby-prompt-pattern "^>> ")
     (setq ruby-buffer abuf)
     (rails-minor-mode t)
     (pop-to-buffer abuf)))
