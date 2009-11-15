@@ -80,4 +80,11 @@
                      :dir "test/functional"
                      :file-suffix  "_controller_test"
                      :file-ext  "rb"
+                     :test-to 'controller)
+
+  (rails/defresource 'integration-test "Integration Test"
+                     :group 'unit-test
+                     :dir "test/integration"
+                     :file-suffix  "_test"
+                     :file-ext  "rb"
                      :test-to 'controller))
