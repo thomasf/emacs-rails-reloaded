@@ -39,7 +39,7 @@
 
 (defun rails/ruby/current-test-method ()
   (let ((action (rails/ruby/current-method))
-	(re "^[[:space:]]*test[[:space:]]+\\(\\'\\|\"\\)\\([^\\1]+\\)\\1"))
+	(re "^[[:space:]]*test[[:space:]]+\\(\\'\\|\"\\)\\([^\\1]+\\)\\1[[:space:]]+do[[:space:]]*$"))
     (unless action
       (save-excursion
 	(end-of-line)
