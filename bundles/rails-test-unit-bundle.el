@@ -6,7 +6,7 @@
   (rails/compile/run-file
    root
    rails-buffer
-   (concat rails/ruby/command " -Itest")
+   (concat rails/ruby/command " -I\"lib:test\"")
    "%s"
    "_test\\.rb$"))
 
@@ -15,7 +15,7 @@
     (rails/compile/run-file
      root
      rails-buffer
-     (concat rails/ruby/command " -Itest")
+     (concat rails/ruby/command " -I\"lib:test\"")
      (concat "%s --name=" method)
      "_test\\.rb$")))
 
