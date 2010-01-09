@@ -8,7 +8,7 @@
 
 (defvar rails/generator-bundle/options "-s")
 (defvar rails/generator-bundle/history nil)
-(defvar rails/generator-bundle/tasks-regexp "^\s+\\(Plugins ([^)]+)\\|Builtin\\|Rubygems\\):\s+\\(.*\\)$"
+(defvar rails/generator-bundle/tasks-regexp "^\s+\\(Plugins ([^)]+)\\|Builtin\\|Lib\\|Rubygems\\):\s+\\(.*\\)$"
   "Regexp to match tasks list in `rake --tasks` output.")
 
 (defvar rails/generator-bundle/button-regexp "^\s+create\s+\\(.*\\)$")
