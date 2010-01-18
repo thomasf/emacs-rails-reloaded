@@ -86,5 +86,10 @@
                      :group 'unit-test
                      :dir "test/integration"
                      :file-suffix  "_test"
-                     :file-ext  "rb"
-                     :test-to 'controller))
+                     :file-ext  "rb")
+
+  (rails/defresource 'performance-test "Performance Test"
+                     :group 'unit-test
+                     :dir "test/performance"
+                     :file-suffix  "_test"
+                     :file-ext  "rb"))
