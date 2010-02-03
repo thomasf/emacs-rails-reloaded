@@ -63,6 +63,12 @@
                      :file-ext  "rb"
                      :file-suffix "_controller")
 
+  (rails/defresource 'cell "Cell"
+                     :dir "app/cells"
+		             :file-pattern "{name}/.*"
+		             :options 'expand-in-menu
+		             :weight 2)
+    
   (rails/defresource 'mailer "Mailer"
                      :dir "app/models"
                      :file-ext  "rb"
@@ -106,7 +112,8 @@
   (rails/defresource 'javascript "Javascript"
                      :dir "public/javascripts"
                      :file-ext  "js")
+
   (rails/defresource 'lib "Library"
-		     :dir "lib"
-		     :file-ext "rb")
+		             :dir "lib"
+		             :file-ext "rb")
  )
