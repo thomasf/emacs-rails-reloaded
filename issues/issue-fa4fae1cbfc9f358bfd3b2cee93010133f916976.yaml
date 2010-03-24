@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Make *ROutput* use comint-mode to be able to use debugger.
+desc: ""
+type: :bugfix
+component: emacs-rails-reloaded
+release: 
+reporter: Aleksei Gusev <aleksei.gusev@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2010-03-24 20:02:15.350306 Z
+references: []
+
+id: fa4fae1cbfc9f358bfd3b2cee93010133f916976
+log_events: 
+- - 2010-03-24 20:02:18.930248 Z
+  - Aleksei Gusev <aleksei.gusev@gmail.com>
+  - created
+  - ""
