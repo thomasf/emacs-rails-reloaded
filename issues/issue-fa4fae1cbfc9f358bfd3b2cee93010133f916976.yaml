@@ -5,8 +5,8 @@ type: :bugfix
 component: emacs-rails-reloaded
 release: 
 reporter: Aleksei Gusev <aleksei.gusev@gmail.com>
-status: :unstarted
-disposition: 
+status: :closed
+disposition: :fixed
 creation_time: 2010-03-24 20:02:15.350306 Z
 references: []
 
@@ -15,4 +15,8 @@ log_events:
 - - 2010-03-24 20:02:18.930248 Z
   - Aleksei Gusev <aleksei.gusev@gmail.com>
   - created
+  - ""
+- - 2010-03-26 22:05:59.574746 Z
+  - Aleksei Gusev <aleksei.gusev@gmail.com>
+  - closed with disposition fixed
   - ""

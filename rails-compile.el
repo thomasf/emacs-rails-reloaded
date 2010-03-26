@@ -74,11 +74,11 @@
 	 1 4 nil '(3 . 2) 1)))
 
 
-(define-derived-mode rails/compilation-mode compilation-mode "RCompile"
+(define-derived-mode rails/compilation-mode comint-mode "RCompile"
   "Major mode for RoR tests."
   (set (make-local-variable 'font-lock-keywords-only) t)
   (set (make-local-variable 'font-lock-keywords) nil)
-	;; (set (make-local-variable 'font-lock-defaults) nil) ; to enable fontify by ansi-color
+  ;; (set (make-local-variable 'font-lock-defaults) nil) ; to enable fontify by ansi-color
   ;; (set (make-local-variable 'font-lock-defaults)
   ;;      '(rails/compile/font-lock-keywords t))
   (set (make-local-variable 'compilation-mode-font-lock-keywords)
