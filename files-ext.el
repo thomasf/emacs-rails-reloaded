@@ -129,5 +129,4 @@
 ;; 		   (files-ext/file-in-directories-p '("/tmp" "../" )  "../foo")))
 ;;     (should-not  (files-ext/file-in-directories-p
 ;; 		  '("../" "/tmp")  "../../foo"))))
-
 (provide 'files-ext)
