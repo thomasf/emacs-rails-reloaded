@@ -44,14 +44,14 @@
       (save-excursion
 	(end-of-line)
 	(when (re-search-backward re nil t)
-	  (setq action
+          (setq action
 		(concat "test_"
 			(replace-regexp-in-string
-			 "[[:space:]]"
-			 "_"
-			 (buffer-substring-no-properties
-			  (match-beginning 2)
-			  (match-end 2)))))))
+                         "[[:space:]]"
+                         "_"
+                         (buffer-substring-no-properties
+                          (match-beginning 2)
+                          (match-end 2)))))))
       action)))
 
 (defun rails/ruby/goto-method-in-current-buffer (action)
@@ -80,8 +80,8 @@
       (setq inf-ruby-buffer abuf)
       (make-local-variable 'inferior-ruby-first-prompt-pattern)
       (make-local-variable 'inferior-ruby-prompt-pattern)
-      (setq inf-ruby-first-prompt-pattern "^>> "
-	    inf-ruby-prompt-pattern "^>> ")
+      (setq inf-ruby-first-prompt-pattern "^.*> "
+            inf-ruby-prompt-pattern "^.*> ")
       (setq ruby-buffer abuf)
       (rails-minor-mode t))
     (pop-to-buffer abuf)))
