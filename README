@@ -71,6 +71,7 @@ can find them in the brackets.
   [C-c j] to display javascript list
   [C-c s] to display css styles list
   [C-c b] to display library list
+  [C-c f] to display cucumber features list
 
 * Support test frameworks Test::Unit and RSpec, press [C-c C-c .] or
   [C-c C-c ,] to run current test.
