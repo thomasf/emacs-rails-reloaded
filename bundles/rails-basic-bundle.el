@@ -68,6 +68,10 @@
 		             :file-pattern "{name}/.*"
 		             :options 'expand-in-menu
 		             :weight 2)
+  
+  (rails/defresource 'feature "Feature"
+                     :dir "features"
+                     :file-ext "feature")
     
   (rails/defresource 'mailer "Mailer"
                      :dir "app/models"
