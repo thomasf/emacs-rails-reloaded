@@ -158,6 +158,10 @@
   (interactive)
   (rails/anything/goto 'controller))
 
+(defun rails/goto-feature ()
+  (interactive)
+  (rails/anything/goto 'feature))
+
 (defun rails/goto-migration ()
   (interactive)
   (rails/anything/goto 'migration))
@@ -251,6 +255,7 @@
       ((rails/short-key ";")        'rails/goto)
       ((rails/short-key "/")        'rails/runner/toggle-output-window)
       ((rails/short-key "m")        'rails/goto-model)
+      ((rails/short-key "f")        'rails/goto-feature)
       ((rails/short-key "g")        'rails/goto-migration)
       ((rails/short-key "c")        'rails/goto-controller)
       ((rails/short-key "v")        'rails/goto-view)
