@@ -111,4 +111,12 @@
                      :file-suffix  "_spec"
                      :file-pattern "{name}/.*"
                      :file-ext  "rb"
-                     :test-to 'lib ))
+                     :test-to 'lib )
+
+  (rails/defresource 'routing-spec "RSpec Routing"
+                     :group 'spec
+                     :dir "spec/routing"
+                     :file-suffix  "_spec"
+                     :file-pattern "{name}/.*"
+                     :file-ext  "rb"
+                     :test-to 'routing))
